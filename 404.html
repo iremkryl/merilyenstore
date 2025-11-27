@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting...</title>
+    <script>
+      // URL'den admin/html yolu varsa index.html'e yönlendir
+      const path = window.location.pathname;
+      if (path.startsWith("/admin/html/")) {
+        window.location.href = "/admin/html/index.html";
+      } else {
+        // Diğer tüm 404'lerde anasayfaya gönder
+        window.location.href = "/";
+      }
+    </script>
+  </head>
+  <body>
+    Yönlendiriliyorsunuz...
+  </body>
+</html>
