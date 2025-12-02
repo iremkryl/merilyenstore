@@ -1,34 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-	<title>Merilyen ❤️</title>
+	<title>Merilyen ❤️ İstatistikler</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->	
 	<link rel="icon" type="image/png" href="images/icons/m-icon.png"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
+	
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/linearicons-v1.0.0/icon-font.min.css">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->	
 	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-<!--===============================================================================================-->
+	<style>
+        .border-statistic {
+            border: 1px solid #e6e6e6;
+            border-radius: 10px;
+            transition: all 0.3s;
+            background: #fff;
+        }
+        .border-statistic:hover {
+            box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+            border-color: #717fe0;
+        }
+        /* Basit Grafik Stili */
+        .chart-bar {
+            width: 50px;
+            background: #e6e6e6;
+            position: relative;
+            border-radius: 5px 5px 0 0;
+            transition: height 1s ease-out;
+        }
+        .chart-bar span {
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: Poppins-Medium; /* Şablon fontu */
+            font-size: 14px;
+            color: #333;
+        }
+
+        /* Sol Alttaki Sabit Buton Stili */
+        .btn-stats-floating {
+            position: fixed;
+            bottom: 30px; 
+            left: 30px;   
+            z-index: 99999; 
+            background-color: #717fe0; 
+            color: white !important;
+            padding: 12px 25px;
+            border-radius: 50px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        .btn-stats-floating i { margin-right: 8px; font-size: 18px; }
+        .btn-stats-floating:hover {
+            background-color: #333; 
+            transform: translateY(-5px);
+        }
+    </style>
 </head>
+
 <body class="animsition">
 	
 	<!-- Header -->
@@ -56,7 +102,7 @@
 						</a>
 
 						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							TL
+							₺
 						</a>
 					</div>
 				</div>
@@ -92,11 +138,11 @@
 								<a href="shoping-cart.html">Sepetiniz</a>
 							</li>
 
-							<li class="active-menu">
+							<li>
 								<a href="blog.html">Blog</a>
 							</li>
 
-							<li>
+							<li class="active-menu">
 								<a href="about.html">Hakkımızda</a>
 							</li>
 
@@ -179,7 +225,7 @@
 						</a>
 
 						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							TL
+							₺
 						</a>
 					</div>
 				</li>
@@ -279,373 +325,203 @@
 	</div>
 
 
-	<!-- breadcrumb -->
-	<div class="container">
-		<div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
-			<a href="index.html" class="stext-109 cl8 hov-cl1 trans-04">
-				Anasayfa
-				<i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
-			</a>
+	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/sayilarla.png');">
+		<h2 class="ltext-105 cl0 txt-center">
+			Sayılarla Merilyen
+		</h2>
+	</section>	
 
-			<a href="blog.html" class="stext-109 cl8 hov-cl1 trans-04">
-				Blog
-				<i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
-			</a>
-
-			<span class="stext-109 cl4">
-				Yeni Ürün Duyurusu: YELEK Geldi!
-			</span>
-		</div>
-	</div>
-
-
-	<!-- Content page -->
-	<section class="bg0 p-t-52 p-b-20">
+<section class="bg0 p-t-75 p-b-120">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-lg-9 p-b-80">
-					<div class="p-r-45 p-r-0-lg">
-						<!--  -->
-						<div class="wrap-pic-w how-pos5-parent">
-							<img src="images/yeni-ürün.png" alt="IMG-BLOG">
+			
+            <div class="row p-b-80">
+				<div class="col-12 text-center">
+					<h3 class="mtext-111 cl2">
+						Emek, tutku ve sayılarla büyüyen hikayemiz.
+					</h3>
+					<p class="stext-113 cl6 p-t-10">
+						Desteğiniz için teşekkür ederiz. ❤️
+					</p>
+				</div>
+			</div>
 
-							<div class="flex-col-c-m size-123 bg9 how-pos5">
-								<span class="ltext-107 cl2 txt-center">
-									26
-								</span>
-
-								<span class="stext-109 cl3 txt-center">
-									Kasım 2025
-								</span>
-							</div>
+            <div class="row p-b-60">
+				<div class="col-md-6 col-lg-3 p-b-30">
+					<div class="p-t-20 p-b-20 text-center border-statistic">
+						<div class="fs-50 cl1 p-b-10">
+							<i class="fa fa-shopping-basket"></i>
 						</div>
-
-						<div class="p-t-32">
-							<span class="flex-w flex-m stext-111 cl2 p-b-19">
-								<span>
-									<span class="cl4">By</span> İrem Karayel  
-									<span class="cl12 m-l-4 m-r-6">|</span>
-								</span>
-
-								<span>
-									7 Aralık, 2025
-									<span class="cl12 m-l-4 m-r-6">|</span>
-								</span>
-
-								<span>
-									Yeni Ürün, Yelek, İndirim
-									<span class="cl12 m-l-4 m-r-6">|</span>
-								</span>
-
-								<span>
-									6 Yorum
-								</span>
-							</span>
-
-							<h4 class="ltext-109 cl2 p-b-28">
-								Yeni Ürün Duyurusu: YELEK Geldi!
-							</h4>
-
-							<p class="stext-117 cl6 p-b-26">
-								Yeni sezon el emeği yeleklerimiz mağazamızda sizleri bekliyor! Her yelek, özenle örülmüş, benzersiz ve tamamen el emeği bir tasarım. Şimdilik stok ve çeşitler sınırlı olsa da çok yakında koleksiyonumuzu yeni renkler ve modellerle genişleteceğiz.
-							</p>
-
-							<p class="stext-117 cl6 p-b-26">
-								Bu süreçte, Instagram hesabımız üzerinden bizimle iletişime geçerek kişiye özel sipariş de verebilirsiniz. İster beden, ister renk tercihiniz olsun, yeleğinizi sizin için özel olarak hazırlayabiliriz. El emeğinin sıcaklığını ve eşsiz tasarımları keşfetmek için şimdi koleksiyonumuza göz atın ve kendi tarzınızı tamamlayın!
-							</p>
-						</div>
-
-						<div class="flex-w flex-t p-t-16">
-							<span class="size-216 stext-116 cl8 p-t-4">
-								Etiketler
-							</span>
-
-							<div class="flex-w size-217">
-								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
-									Yeni Ürün
-								</a>
-
-								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
-									Yelek
-								</a>
-
-								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
-									İndirim
-								</a>
-							</div>
-						</div>
-
-						<!--  -->
-						<div class="p-t-40">
-							<h5 class="mtext-113 cl2 p-b-12">
-								Yorum Bırakın
-							</h5>
-
-							<p class="stext-107 cl6 p-b-40">
-								E-posta adresiniz gizli tutulacaktır. Gerekli alanlar * ile işaretlenmiştir.
-							</p>
-
-							<form>
-								<div class="bor19 m-b-20">
-									<textarea class="stext-111 cl2 plh3 size-124 p-lr-18 p-tb-15" name="cmt" placeholder="Yorumunuz..."></textarea>
-								</div>
-
-								<div class="bor19 size-218 m-b-20">
-									<input class="stext-111 cl2 plh3 size-116 p-lr-18" type="text" name="name" placeholder="Adınız *">
-								</div>
-
-								<div class="bor19 size-218 m-b-20">
-									<input class="stext-111 cl2 plh3 size-116 p-lr-18" type="text" name="email" placeholder="E-posta Adresiniz *">
-								</div>
-
-								<button class="flex-c-m stext-101 cl0 size-125 bg3 bor2 hov-btn3 p-lr-15 trans-04">
-									Yorumu Gönder
-								</button>
-							</form>
-						</div>
+						<span class="ltext-102 cl2 counter" data-target="1500">0</span>
+						<span class="ltext-102 cl2">+</span>
+						<p class="stext-113 cl6 p-t-10">Sipariş Teslim Edildi</p>
 					</div>
 				</div>
-				<div class="col-md-4 col-lg-3 p-b-80">
-					<div class="side-menu">
-						<div class="bor17 of-hidden pos-relative">
-							<input class="stext-103 cl2 plh4 size-116 p-l-28 p-r-55" type="text" name="search" placeholder="Arama">
 
-							<button class="flex-c-m size-122 ab-t-r fs-18 cl4 hov-cl1 trans-04">
-								<i class="zmdi zmdi-search"></i>
-							</button>
+				<div class="col-md-6 col-lg-3 p-b-30">
+					<div class="p-t-20 p-b-20 text-center border-statistic">
+						<div class="fs-50 cl1 p-b-10">
+							<i class="fa fa-heart"></i>
 						</div>
-
-						<div class="p-t-55">
-							<h4 class="mtext-112 cl2 p-b-33">
-								Kategoriler
-							</h4>
-
-							<ul>
-								<li class="bor18">
-									<a href="product.html#kol" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4">
-										Kol Çantası
-									</a>
-								</li>
-
-								<li class="bor18">
-									<a href="product.html#elcantasi" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4">
-										El Çantası
-									</a>
-								</li>
-
-								<li class="bor18">
-									<a href="product.html#capraz" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4">
-										Çapraz Çanta
-									</a>
-								</li>
-
-								<li class="bor18">
-									<a href="product.html#sirtcantasi" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4">
-										Sırt Çantası
-									</a>
-								</li>
-
-								<li class="bor18">
-									<a href="product.html#yelek" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4">
-										Yelekler
-									</a>
-								</li>
-							</ul>
-						</div>
-
-						<div class="p-t-65">
-							<h4 class="mtext-112 cl2 p-b-33">
-								Öne Çıkanlar
-							</h4>
-
-							<ul>
-								<li class="flex-w flex-t p-b-30">
-									<a href="product.html#kol" class="wrao-pic-w size-214 hov-ovelay1 m-r-20">
-										<img src="images/renkli-kol-motifli.png" alt="PRODUCT" width="90" height="110">
-									</a>
-
-									<div class="size-215 flex-col-t p-t-8">
-										<a href="product.html#kol" class="stext-116 cl8 hov-cl1 trans-04">
-											Renkli Motifli Kol Çantası
-										</a>
-
-										<span class="stext-116 cl6 p-t-20">
-											650₺
-										</span>
-									</div>
-								</li>
-
-								<li class="flex-w flex-t p-b-30">
-									<a href="product.html#yelek" class="wrao-pic-w size-214 hov-ovelay1 m-r-20">
-										<img src="images/lacivert-yelek.png" alt="PRODUCT" width="90" height="110">
-									</a>
-
-									<div class="size-215 flex-col-t p-t-8">
-										<a href="product.html#yelek" class="stext-116 cl8 hov-cl1 trans-04">
-											Lacivert-Beyaz Yelek
-										</a>
-
-										<span class="stext-116 cl6 p-t-20">
-											100₺
-										</span>
-									</div>
-								</li>
-
-								<li class="flex-w flex-t p-b-30">
-									<a href="product.html#kol" class="wrao-pic-w size-214 hov-ovelay1 m-r-20">
-										<img src="images/yeşil-beyaz-kol.png" alt="PRODUCT" width="90" height="110">
-									</a>
-
-									<div class="size-215 flex-col-t p-t-8">
-										<a href="product.html#kol" class="stext-116 cl8 hov-cl1 trans-04">
-											Yeşil Beyaz Kol Çantası
-										</a>
-
-										<span class="stext-116 cl6 p-t-20">
-											700₺
-										</span>
-									</div>
-								</li>
-							</ul>
-						</div>
-
-						<div class="p-t-55">
-							<h4 class="mtext-112 cl2 p-b-20">
-								Arşiv
-							</h4>
-
-							<ul>
-								<li class="p-b-7">
-									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2">
-										<span>
-											Aralık 2025
-										</span>
-
-										<span>
-											(5)
-										</span>
-									</a>
-								</li>
-
-								<li class="p-b-7">
-									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2">
-										<span>
-											Kasım 2025
-										</span>
-
-										<span>
-											(2)
-										</span>
-									</a>
-								</li>
-
-								<li class="p-b-7">
-									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2">
-										<span>
-											Ekim 2025
-										</span>
-
-										<span>
-											(4)
-										</span>
-									</a>
-								</li>
-
-								<li class="p-b-7">
-									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2">
-										<span>
-											Eylül 2025
-										</span>
-
-										<span>
-											(3)
-										</span>
-									</a>
-								</li>
-
-								<li class="p-b-7">
-									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2">
-										<span>
-											Ağustos 2025
-										</span>
-
-										<span>
-											(8)
-										</span>
-									</a>
-								</li>
-
-								<li class="p-b-7">
-									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2">
-										<span>
-											Temmuz 2025
-										</span>
-
-										<span>
-											(3)
-										</span>
-									</a>
-								</li>
-
-								<li class="p-b-7">
-									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2">
-										<span>
-											Haziran 2025
-										</span>
-
-										<span>
-											(2)
-										</span>
-									</a>
-								</li>
-
-								<li class="p-b-7">
-									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2">
-										<span>
-											Mayıs 2025
-										</span>
-
-										<span>
-											(6)
-										</span>
-									</a>
-								</li>
-							</ul>
-						</div>
-
-						<div class="p-t-50">
-							<h4 class="mtext-112 cl2 p-b-27">
-								Etiketler
-							</h4>
-
-							<div class="flex-w m-r--5">
-								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
-									Moda
-								</a>
-
-								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
-									El Emeği
-								</a>
-
-								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
-									Göz Nuru
-								</a>
-
-								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
-									Örgü
-								</a>
-
-								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
-									Kadın Emeği
-								</a>
-							</div>
-						</div>
+						<span class="ltext-102 cl2 counter" data-target="3200">0</span>
+						<span class="ltext-102 cl2">+</span>
+						<p class="stext-113 cl6 p-t-10">Mutlu Müşteri</p>
 					</div>
-				</div>		
+				</div>
+
+				<div class="col-md-6 col-lg-3 p-b-30">
+					<div class="p-t-20 p-b-20 text-center border-statistic">
+						<div class="fs-50 cl1 p-b-10">
+							<i class="fa fa-pencil"></i>
+						</div>
+						<span class="ltext-102 cl2 counter" data-target="85000">0</span>
+						<span class="ltext-102 cl2">m</span>
+						<p class="stext-113 cl6 p-t-10">İp Kullanıldı</p>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-lg-3 p-b-30">
+					<div class="p-t-20 p-b-20 text-center border-statistic">
+						<div class="fs-50 cl1 p-b-10">
+							<i class="fa fa-clock-o"></i>
+						</div>
+						<span class="ltext-102 cl2 counter" data-target="35">0</span>
+						<span class="ltext-102 cl2">Yıl</span>
+						<p class="stext-113 cl6 p-t-10">El Emeği Tecrübesi</p>
+					</div>
+				</div>
 			</div>
+
+            <div class="row p-b-60">
+                <div class="col-md-6 col-lg-3 p-b-30">
+					<div class="p-t-20 p-b-20 text-center border-statistic">
+						<div class="fs-50 cl1 p-b-10">
+							<i class="fa fa-star"></i>
+						</div>
+						<span class="ltext-102 cl2 counter" data-target="120">0</span>
+						<span class="ltext-102 cl2">+</span>
+						<p class="stext-113 cl6 p-t-10">Özgün Model Tasarımı</p>
+					</div>
+				</div>
+
+                <div class="col-md-6 col-lg-3 p-b-30">
+					<div class="p-t-20 p-b-20 text-center border-statistic">
+						<div class="fs-50 cl1 p-b-10">
+							<i class="fa fa-map-marker"></i>
+						</div>
+						<span class="ltext-102 cl2 counter" data-target="81">0</span>
+						<p class="stext-113 cl6 p-t-10">İl'e Kargo Gönderimi</p>
+					</div>
+				</div>
+
+                <div class="col-md-6 col-lg-3 p-b-30">
+					<div class="p-t-20 p-b-20 text-center border-statistic">
+						<div class="fs-50 cl1 p-b-10">
+							<i class="fa fa-leaf"></i>
+						</div>
+						<span class="ltext-102 cl2">%</span>
+						<span class="ltext-102 cl2 counter" data-target="100">0</span>
+						<p class="stext-113 cl6 p-t-10">Doğa Dostu Malzeme</p>
+					</div>
+				</div>
+
+                <div class="col-md-6 col-lg-3 p-b-30">
+					<div class="p-t-20 p-b-20 text-center border-statistic">
+						<div class="fs-50 cl1 p-b-10">
+							<i class="fa fa-truck"></i>
+						</div>
+						<span class="ltext-102 cl2 counter" data-target="3">0</span>
+						<span class="ltext-102 cl2">Gün</span>
+						<p class="stext-113 cl6 p-t-10">Ortalama Teslim Süresi</p>
+					</div>
+				</div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 p-b-40">
+                    <h3 class="mtext-111 cl2 p-b-30">Kategori Tercih Oranları</h3>
+                    
+                    <div class="p-b-20">
+                        <div class="flex-w flex-sb-m p-b-5">
+                            <span class="mtext-107 cl2">Kol Çantası</span>
+                            <span class="mtext-107 cl2">35%</span>
+                        </div>
+                        <div class="progress" style="height: 20px;">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+                    <div class="p-b-20">
+                        <div class="flex-w flex-sb-m p-b-5">
+                            <span class="mtext-107 cl2">Çapraz Çanta</span>
+                            <span class="mtext-107 cl2">25%</span>
+                        </div>
+                        <div class="progress" style="height: 20px;">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+					<div class="p-b-20">
+                        <div class="flex-w flex-sb-m p-b-5">
+                            <span class="mtext-107 cl2">El Çantası</span>
+                            <span class="mtext-107 cl2">15%</span>
+                        </div>
+                        <div class="progress" style="height: 20px;">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+                    <div class="p-b-20">
+                        <div class="flex-w flex-sb-m p-b-5">
+                            <span class="mtext-107 cl2">Sırt Çantası</span>
+                            <span class="mtext-107 cl2">15%</span>
+                        </div>
+                        <div class="progress" style="height: 20px;">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+                    <div class="p-b-20">
+                        <div class="flex-w flex-sb-m p-b-5">
+                            <span class="mtext-107 cl2">Yelek & Aksesuar</span>
+                            <span class="mtext-107 cl2">10%</span>
+                        </div>
+                        <div class="progress" style="height: 20px;">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 p-b-40 text-center">
+                    <h3 class="mtext-111 cl2 p-b-40">Yıllık Sipariş Hacmi</h3>
+                    <div style="display:flex; justify-content:center; align-items:flex-end; height:250px; gap:30px; border-bottom: 2px solid #e6e6e6; padding-bottom: 10px;">
+                        
+                        <div style="display:flex; flex-direction:column; align-items:center; height:100%; justify-content:flex-end;">
+                            <span class="stext-107 cl6 p-b-10">850</span>
+                            <div class="chart-bar" style="height:40%; width:60px; background:#e6e6e6;"></div>
+                            <span class="stext-107 cl2 p-t-10">2023</span>
+                        </div>
+
+                        <div style="display:flex; flex-direction:column; align-items:center; height:100%; justify-content:flex-end;">
+                            <span class="stext-107 cl6 p-b-10">1600</span>
+                            <div class="chart-bar" style="height:65%; width:60px; background:#ccc;"></div>
+                            <span class="stext-107 cl2 p-t-10">2024</span>
+                        </div>
+
+                        <div style="display:flex; flex-direction:column; align-items:center; height:100%; justify-content:flex-end;">
+                            <span class="stext-107 cl6 p-b-10">3200+</span>
+                            <div class="chart-bar" style="height:90%; width:60px; background:#717fe0;"></div>
+                            <span class="stext-107 cl2 p-t-10">2025</span>
+                        </div>
+
+                    </div>
+                    <p class="stext-113 cl6 p-t-20">
+                        Yıllara göre artan sipariş ve üretim kapasitemiz.
+                    </p>
+                </div>
+            </div>
+
 		</div>
-	</section>	
-	
+	</section>
 
 	<!-- Footer -->
 	<footer class="bg3 p-t-75 p-b-32">
@@ -801,63 +677,18 @@
 				</div>
 
 				<p class="stext-107 cl6 txt-center">
-					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Tüm hakları saklıdır &copy;<script>document.write(new Date().getFullYear());</script> | İrem Karayel | <a href="https://colorlib.com" target="_blank">Colorlib</a> &amp; <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-
+					Tüm hakları saklıdır &copy;<script>document.write(new Date().getFullYear());</script> | İrem Karayel | <a href="https://colorlib.com" target="_blank">Colorlib</a> &amp; <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
 				</p>
 			</div>
 		</div>
 	</footer>
 
+    <a href="sayilarla-merilyen.html" class="btn-stats-floating">
+        <i class="fa fa-bar-chart"></i> 
+        Sayılarla Merilyen
+    </a>
 
-	<style>
-		.btn-stats-floating {
-			position: fixed;
-			bottom: 30px; 
-			left: 30px;   
-			z-index: 99999; /* Diğer öğelerin üzerinde durması için */
-			background-color: #717fe0; /* Tema rengi */
-			color: white !important;
-			padding: 12px 25px;
-			border-radius: 50px; 
-			box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			font-family: Arial, sans-serif; /* Font problemi olmaması için standart font */
-			font-size: 15px;
-			font-weight: bold;
-			text-decoration: none;
-			transition: all 0.3s;
-			cursor: pointer;
-		}
-		.btn-stats-floating i { margin-right: 8px; font-size: 18px; }
-		.btn-stats-floating:hover {
-			background-color: #333; /* Mouse üzerine gelince koyu renk */
-			transform: translateY(-5px); /* Hafif yukarı kalkma efekti */
-			color: #fff !important;
-		}
-		
-		/* Mobil uyumluluk: Mobilde biraz küçültelim */
-		@media (max-width: 768px) {
-			.btn-stats-floating {
-				bottom: 15px;
-				left: 15px;
-				padding: 10px 15px;
-				font-size: 13px;
-			}
-		}
-	</style>
-
-	<a href="sayilarla-merilyen.html" class="btn-stats-floating">
-		<i class="fa fa-bar-chart"></i> 
-		Sayılarla Merilyen
-	</a>
-
-
-	<!-- Sayfa Başına Dön Butonu -->
-	<div class="btn-back-to-top" id="myBtn">
+    <div class="btn-back-to-top" id="myBtn">
 		<span class="symbol-btn-back-to-top">
 			<i class="zmdi zmdi-chevron-up"></i>
 		</span>
@@ -901,6 +732,38 @@ Tüm hakları saklıdır &copy;<script>document.write(new Date().getFullYear());
 	</script>
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
+	
+    
+	<script>
+        // Sayaç Scripti
+		const counters = document.querySelectorAll('.counter');
+		counters.forEach(counter => {
+			counter.innerText = '0';
+			const updateCounter = () => {
+				const target = +counter.getAttribute('data-target');
+				const c = +counter.innerText;
+				const increment = target / 200;
+				if(c < target) {
+					counter.innerText = `${Math.ceil(c + increment)}`;
+					setTimeout(updateCounter, 20);
+				} else {
+					counter.innerText = target;
+				}
+			};
+            updateCounter();
+		});
 
+		// --- YAPIŞKAN MENÜ DÜZELTMESİ ---
+        window.onscroll = function() {
+            var menuDesktop = document.querySelector('.wrap-menu-desktop');
+            var topBarHeight = 40; // Top-bar genelde 40px civarıdır
+            
+            if (window.pageYOffset > topBarHeight) {
+                menuDesktop.classList.add("fix-menu-manual");
+            } else {
+                menuDesktop.classList.remove("fix-menu-manual");
+            }
+        };
+	</script>
 </body>
 </html>

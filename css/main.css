@@ -3423,5 +3423,47 @@ input.num-product::-webkit-inner-spin-button {
     color: #b3b3b3 !important; /* Gri */
 }
 
+/* Sayılarla Merilyen Sabit Butonu */
+.btn-stats-floating {
+    position: fixed;
+    bottom: 40px; /* Aşağıdan mesafe */
+    left: 40px;   /* Soldan mesafe */
+    z-index: 9999; /* En üstte durması için */
+    background-color: #717fe0; /* Tema rengin */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px; /* Hap şeklinde */
+    box-shadow: 0 4px 15px rgba(113, 127, 224, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Poppins-Medium; /* Fontun */
+    font-size: 15px;
+    text-decoration: none;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.btn-stats-floating i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.btn-stats-floating:hover {
+    background-color: #333; /* Üzerine gelince siyah olsun */
+    color: #fff;
+    transform: translateY(-5px); /* Hafif yukarı kalksın */
+    text-decoration: none;
+}
+
+/* Mobilde butonun biraz küçülmesi için */
+@media (max-width: 768px) {
+    .btn-stats-floating {
+        bottom: 20px;
+        left: 20px;
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+}
 
 }
